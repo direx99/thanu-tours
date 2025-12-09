@@ -6,55 +6,55 @@ const Tours = () => {
             id: 1,
             title: "Ella Adventure",
             points: ["Ravana Waterfall", "Train Journey", "9 Arch Bridge", "Little Adam's Peak", "Tea Plantation"],
-            image: "/assets/images/generated/ella.png"
+            image: "/assets/images/generated/ella.jpg"
         },
         {
             id: 2,
             title: "Galle Explorer",
             points: ["Kanda Vihara Temple", "Bentota River Safari", "Spices & Herbal Garden", "Turtle Farm", "Tsunami Memorial", "Moonstone Mine", "Hikkaduwa Beach", "Galle Dutch Fort"],
-            image: "/assets/images/generated/galle.png"
+            image: "/assets/images/generated/galle.jpg"
         },
         {
             id: 3,
             title: "Kandy Cultural Tour",
             points: ["Pinnawala Elephant Orphanage", "Spices & Herbal Garden", "Tea Plantation & Factory", "Royal Botanical Garden", "Kandy Gem Mine", "Temple of the Tooth Relic"],
-            image: "/assets/images/generated/kandy.png"
+            image: "/assets/images/generated/kandy.jpg"
         },
         {
             id: 4,
             title: "Yala Safari",
             points: ["Full Day Wildlife Safari", "Leopard Spotting", "Bird Watching"],
-            image: "/assets/images/generated/yala.png"
+            image: "/assets/images/generated/yala.jpg"
         },
         {
             id: 5,
             title: "Whale Watching",
             points: ["Whale Watching", "Stick Fishing", "Swimming at Nice Beach"],
-            image: "/assets/images/generated/whale.png"
+            image: "/assets/images/generated/whale.jpg"
         },
         {
             id: 6,
             title: "Udawalawe Safari",
             points: ["Elephant Transit Home", "Jeep Safari", "Nature Trails"],
-            image: "/assets/images/generated/udawalawe.png"
+            image: "/assets/images/generated/udawalawe.jpg"
         },
         {
             id: 7,
             title: "Sigiriya & Dambulla",
             points: ["Sigiriya Lion Rock", "Dambulla Golden Rock Temple", "Village Tour"],
-            image: "/assets/images/generated/sigiriya.png"
+            image: "/assets/images/generated/sigiriya.jpg"
         },
         {
             id: 8,
             title: "Colombo City Tour",
             points: ["Lotus Tower", "Independent Square", "Gangaramaya Temple", "Shopping"],
-            image: "/assets/images/generated/colombo.png"
+            image: "/assets/images/generated/colombo.jpg"
         },
         {
             id: 9,
             title: "Airport Pick up/Drop",
             points: ["Hassle-free Transfer", "AC Comfort", "24/7 Service"],
-            image: "/assets/images/generated/airport_kdh.png"
+            image: "/assets/images/generated/airport_kdh.jpg"
         }
     ];
 
