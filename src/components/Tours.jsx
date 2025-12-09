@@ -4,30 +4,73 @@ const Tours = () => {
     const tours = [
         {
             id: 1,
-            title: "Coastal Bliss",
-            description: "Explore the golden sandy beaches of the southern coast. Mirissa, Unawatuna, and Hikkaduwa await.",
-            image: "/assets/images/tour-beach.jpg"
+            title: "Ella Adventure",
+            points: ["Ravana Waterfall", "Train Journey", "9 Arch Bridge", "Little Adam's Peak", "Tea Plantation"],
+            image: "/assets/images/generated/ella.png"
         },
         {
             id: 2,
-            title: "Hill Country Escape",
-            description: "Ride the train to Ella, see the Nine Arch Bridge, and feel the cool mist of Nuwara Eliya.",
-            image: "/assets/images/tour-hills.jpg"
+            title: "Galle Explorer",
+            points: ["Kanda Vihara Temple", "Bentota River Safari", "Spices & Herbal Garden", "Turtle Farm", "Tsunami Memorial", "Moonstone Mine", "Hikkaduwa Beach", "Galle Dutch Fort"],
+            image: "/assets/images/generated/galle.png"
         },
         {
             id: 3,
-            title: "Cultural Triangle",
-            description: "Step back in time at Sigiriya, Polonnaruwa, and the Temple of the Tooth in Kandy.",
-            image: "/assets/images/tour-culture.jpg"
+            title: "Kandy Cultural Tour",
+            points: ["Pinnawala Elephant Orphanage", "Spices & Herbal Garden", "Tea Plantation & Factory", "Royal Botanical Garden", "Kandy Gem Mine", "Temple of the Tooth Relic"],
+            image: "/assets/images/generated/kandy.png"
+        },
+        {
+            id: 4,
+            title: "Yala Safari",
+            points: ["Full Day Wildlife Safari", "Leopard Spotting", "Bird Watching"],
+            image: "/assets/images/generated/yala.png"
+        },
+        {
+            id: 5,
+            title: "Whale Watching",
+            points: ["Whale Watching", "Stick Fishing", "Swimming at Nice Beach"],
+            image: "/assets/images/generated/whale.png"
+        },
+        {
+            id: 6,
+            title: "Udawalawe Safari",
+            points: ["Elephant Transit Home", "Jeep Safari", "Nature Trails"],
+            image: "/assets/images/generated/udawalawe.png"
+        },
+        {
+            id: 7,
+            title: "Sigiriya & Dambulla",
+            points: ["Sigiriya Lion Rock", "Dambulla Golden Rock Temple", "Village Tour"],
+            image: "/assets/images/generated/sigiriya.png"
+        },
+        {
+            id: 8,
+            title: "Colombo City Tour",
+            points: ["Lotus Tower", "Independent Square", "Gangaramaya Temple", "Shopping"],
+            image: "/assets/images/generated/colombo.png"
+        },
+        {
+            id: 9,
+            title: "Airport Pick up/Drop",
+            points: ["Hassle-free Transfer", "AC Comfort", "24/7 Service"],
+            image: "/assets/images/generated/airport_kdh.png"
         }
     ];
+
+    const handleBookNow = (tourTitle) => {
+        const message = `Hi Thanu Tours, I am interested in booking the *${tourTitle}*. Please provide more details.`;
+        const url = `https://wa.me/94774718374?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    };
 
     return (
         <section id="tours" className="section bg-light">
             <div className="container">
                 <div className="section-header text-center">
-                    <span className="overline">Discover</span>
-                    <h2>Our Popular Tours</h2>
+                    <span className="overline">Discover Sri Lanka</span>
+                    <h2>Our Exclusive Tours</h2>
+                    <p>Customizable packages for 1 or more days.</p>
                 </div>
                 <div className="tours-grid">
                     {tours.map(tour => (
@@ -35,8 +78,21 @@ const Tours = () => {
                             <div className="tour-image" style={{ backgroundImage: `url('${tour.image}')` }}></div>
                             <div className="tour-content">
                                 <h3>{tour.title}</h3>
-                                <p>{tour.description}</p>
-                                <a href="#contact" className="btn-link">Book Now &rarr;</a>
+                                <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.2rem', textAlign: 'left', color: '#666' }}>
+                                    {tour.points.map((point, index) => (
+                                        <li key={index} style={{ marginBottom: '0.3rem' }}>{point}</li>
+                                    ))}
+                                </ul>
+                                <p className="text-sm" style={{ marginBottom: '1rem', fontStyle: 'italic', color: '#888' }}>
+                                    Duration: 1 or more days (Customizable)
+                                </p>
+                                <button
+                                    onClick={() => handleBookNow(tour.title)}
+                                    className="btn-link"
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1rem', padding: 0 }}
+                                >
+                                    Book via WhatsApp &rarr;
+                                </button>
                             </div>
                         </article>
                     ))}
