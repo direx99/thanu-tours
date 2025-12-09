@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -9,7 +8,7 @@ const Hero = () => {
                 <p className="hero-subtitle">Unforgettable journeys, personalized tours, and a cozy stay at our Guest House in Kalutara.</p>
                 <div className="hero-buttons">
                     <a href="#tours" className="btn btn-primary">Explore Tours</a>
-                    <Link to="/villa" className="btn btn-outline">View Guest House</Link>
+
                 </div>
             </div>
             <div className="scroll-down">
