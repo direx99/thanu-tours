@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaTelegramPlane } from 'react-icons/fa';
 
 const Tours = () => {
     const tours = [
@@ -58,11 +59,19 @@ const Tours = () => {
         }
     ];
 
-    const handleBookNow = (tourTitle) => {
-        const message = `Hi Thanu Tours, I am interested in booking the *${tourTitle}*. Please provide more details.`;
-        const url = `https://wa.me/94774718374?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
+    const bookingLinks = (tourTitle) => {
+        const message = encodeURIComponent(`Hi Thanu Tours, I am interested in booking the *${tourTitle}*.`);
+        return {
+            whatsapp: `https://wa.me/94774718374?text=${message}`,
+            facebook: `https://www.facebook.com/share/1AY2pjWxVS/`, // Direct profile link
+            instagram: `https://ig.me/m/thanu_tours`,
+            telegram: `https://t.me/+94774718374`
+        };
     };
+
+    // Import icons if not already imported at top, but since we are replacing content, we'll assume imports need to be added.
+    // Wait, I need to add imports at the top. I'll do that in a separate chunk or include it if I can view the whole file context better.
+    // For now, I will assume I can edit the return statement and the helper.
 
     return (
         <section id="tours" className="section bg-light">
@@ -73,29 +82,44 @@ const Tours = () => {
                     <p>Customizable packages for 1 or more days.</p>
                 </div>
                 <div className="tours-grid">
-                    {tours.map(tour => (
-                        <article key={tour.id} className="tour-card">
-                            <div className="tour-image" style={{ backgroundImage: `url('${tour.image}')` }}></div>
-                            <div className="tour-content">
-                                <h3>{tour.title}</h3>
-                                <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.2rem', textAlign: 'left', color: '#666' }}>
-                                    {tour.points.map((point, index) => (
-                                        <li key={index} style={{ marginBottom: '0.3rem' }}>{point}</li>
-                                    ))}
-                                </ul>
-                                <p className="text-sm" style={{ marginBottom: '1rem', fontStyle: 'italic', color: '#888' }}>
-                                    Duration: 1 or more days (Customizable)
-                                </p>
-                                <button
-                                    onClick={() => handleBookNow(tour.title)}
-                                    className="btn-link"
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1rem', padding: 0 }}
-                                >
-                                    Book via WhatsApp &rarr;
-                                </button>
-                            </div>
-                        </article>
-                    ))}
+                    {tours.map(tour => {
+                        const links = bookingLinks(tour.title);
+                        return (
+                            <article key={tour.id} className="tour-card">
+                                <div className="tour-image" style={{ backgroundImage: `url('${tour.image}')` }}></div>
+                                <div className="tour-content">
+                                    <h3>{tour.title}</h3>
+                                    <ul className="tour-points">
+                                        {tour.points.map((point, index) => (
+                                            <li key={index}>{point}</li>
+                                        ))}
+                                    </ul>
+                                    <p className="tour-duration">
+                                        Duration: 1 or more days (Customizable)
+                                    </p>
+
+                                    <div className="tour-booking">
+                                        <span className="booking-label">Book via:</span>
+                                        <div className="social-buttons">
+                                            <a href={links.whatsapp} target="_blank" rel="noreferrer" className="social-btn whatsapp" aria-label="Book via WhatsApp">
+                                                {/* We need icons here. I will add imports in next step or use simple text/emoji if SVG fails, but Plan said react-icons */}
+                                                <FaWhatsapp />
+                                            </a>
+                                            <a href={links.facebook} target="_blank" rel="noreferrer" className="social-btn facebook" aria-label="Book via Facebook">
+                                                <FaFacebookF />
+                                            </a>
+                                            <a href={links.instagram} target="_blank" rel="noreferrer" className="social-btn instagram" aria-label="Book via Instagram">
+                                                <FaInstagram />
+                                            </a>
+                                            <a href={links.telegram} target="_blank" rel="noreferrer" className="social-btn telegram" aria-label="Book via Telegram">
+                                                <FaTelegramPlane />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
             </div>
         </section>

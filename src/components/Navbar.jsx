@@ -49,7 +49,6 @@ const Navbar = () => {
                     <li><Link to="/" onClick={(e) => handleNavigation(e, 'home')}>Home</Link></li>
                     <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About</a></li>
                     <li><a href="#tours" onClick={(e) => handleNavigation(e, 'tours')}>Tours</a></li>
-
                     <li><a href="#gallery" onClick={(e) => handleNavigation(e, 'gallery')}>Gallery</a></li>
                     <li><a href="#feedbacks" onClick={(e) => handleNavigation(e, 'feedbacks')}>Feedbacks</a></li>
                     <li><a href="#contact" className="btn-nav" onClick={(e) => handleNavigation(e, 'contact')}>Contact Us</a></li>

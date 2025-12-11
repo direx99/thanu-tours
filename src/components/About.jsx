@@ -7,22 +7,20 @@ const About = () => {
                 <div className="section-header">
                     <span className="overline">Who We Are</span>
                     <h2>Welcome to Thanu Tours</h2>
+                    <p>
+                        Welcome to <strong>Thanu Tours</strong>, your gateway to the wonders of Sri Lanka.
+                        Based in the beautiful coastal town of Kalutara, we specialize in creating personalized
+                        travel experiences that showcase the rich culture, stunning landscapes, and wildlife of our island.
+                    </p>
                 </div>
                 <div className="about-grid">
-                    <div className="about-text">
-                        <p>Located in the beautiful coastal town of <strong>Maha Waskaduwa, Kalutara</strong>, Thanu Tours
-                            offers authentic Sri Lankan experiences tailored just for you. Whether you are seeking
-                            adventure, culture, or relaxation, we make it happen.</p>
-                        <p>We also run a comfortable <strong>Guest House</strong> designed for foreigners looking for a home
-                            away from home. Experience warm hospitality and local charm with us.</p>
-                    </div>
                     <div className="about-stats">
                         <div className="stat-item">
-                            <h3>5+</h3>
+                            <h3>15+</h3>
                             <p>Years Experience</p>
                         </div>
                         <div className="stat-item">
-                            <h3>100+</h3>
+                            <h3>500+</h3>
                             <p>Happy Guests</p>
                         </div>
                         <div className="stat-item">

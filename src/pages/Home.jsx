@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Host from '../components/Host';
 import Tours from '../components/Tours';
 
 import Gallery from '../components/Gallery';
 import Feedbacks from '../components/Feedbacks';
-import Instagram from '../components/Instagram';
+import FollowUs from '../components/FollowUs';
 
 
 const Home = () => {
@@ -25,11 +26,12 @@ const Home = () => {
         <main>
             <Hero />
             <About />
+            <Host />
             <Tours />
 
             <Gallery />
             <Feedbacks />
-            <Instagram />
+            <FollowUs />
         </main>
     );
 };
