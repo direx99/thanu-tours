@@ -877,3 +877,251 @@ img {
   background: #ccc url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22100%25%22 height%3D%22100%25%22 viewBox%3D%220 0 100 100%22%3E%3Crect fill%3D%22%23eee%22 width%3D%22100%22 height%3D%22100%22%2F%3E%3Ctext fill%3D%22%23aaa%22 font-family%3D%22sans-serif%22 font-size%3D%2210%22 dy%3D%2210.5%22 font-weight%3D%22bold%22 x%3D%2250%25%22 y%3D%2250%25%22 text-anchor%3D%22middle%22%3EIMAGE%3C%2Ftext%3E%3C%2Fsvg%3E') no-repeat center center;
   background-size: cover;
 }
+
+/* --- Tour Details Page Revamp --- */
+
+.tour-details-page {
+  background-color: #f9f9f9;
+}
+
+/* Modern Hero */
+.page-hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+
+.page-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.page-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  width: 100%;
+}
+
+.page-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero .lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Timeline Itinerary */
+.itinerary-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+  border-left: 2px solid var(--color-light-gray);
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -16px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline-content {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-content h4 {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+
+.timeline-activities li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Sticky Sidebar */
+.tour-sidebar {
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+}
+
+.price-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Full Width Social Buttons */
+.btn-social-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-social-full:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.btn-social-full .icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.btn-social-full.whatsapp {
+  background-color: #25D366;
+  font-size: 1.1rem;
+  padding: 1.1rem;
+  /* Slightly larger for primary */
+}
+
+.btn-social-full.facebook {
+  background-color: #1877F2;
+}
+
+.btn-social-full.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-social-full.telegram {
+  background-color: #0088cc;
+}
+
+/* Includes List */
+.includes-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.includes-list li:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  color: var(--color-secondary);
+  margin-right: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumbs a {
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 4px;
+}
+
+.breadcrumbs a:hover {
+  text-decoration-color: var(--color-white);
+}
+
+.breadcrumbs span {
+  margin: 0 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+    border-left: none;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-marker {
+    position: static;
+    margin-bottom: 0.5rem;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    color: var(--color-primary);
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .timeline-marker::before {
+    content: "Day ";
+    margin-right: 4px;
+  }
+}
