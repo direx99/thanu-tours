@@ -8,7 +8,8 @@ import {
     FaTelegramPlane,
     FaClock,
     FaCheckCircle,
-    FaMapMarkerAlt
+    FaMapMarkerAlt,
+    FaEnvelope
 } from 'react-icons/fa';
 
 const TourDetails = () => {
@@ -30,11 +31,13 @@ const TourDetails = () => {
 
     const bookingLinks = (tourTitle) => {
         const message = encodeURIComponent(`Hi Thanu Tours, I am interested in booking the *${tourTitle}*.`);
+        const emailSubject = encodeURIComponent(`Booking Inquiry: ${tourTitle}`);
         return {
             whatsapp: `https://wa.me/94774718374?text=${message}`,
             facebook: `https://www.facebook.com/share/1AY2pjWxVS/`,
             instagram: `https://ig.me/m/thanu_tours`,
-            telegram: `https://t.me/+94774718374`
+            telegram: `https://t.me/+94774718374`,
+            email: `mailto:thanu.silva@mail.ru?subject=${emailSubject}`
         };
     };
 
@@ -107,6 +110,9 @@ const TourDetails = () => {
                                     </a>
                                     <a href={links.telegram} target="_blank" rel="noreferrer" className="btn-social-full telegram">
                                         <FaTelegramPlane className="icon" /> Message on Telegram
+                                    </a>
+                                    <a href={links.email} className="btn-social-full email">
+                                        <FaEnvelope className="icon" /> Book via Email
                                     </a>
                                 </div>
 

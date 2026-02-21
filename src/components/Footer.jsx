@@ -11,6 +11,9 @@ const Footer = () => {
                     <div className="contact-item">
                         <span>📞</span> <a href="tel:+94774718374">+94 77 471 8374</a>
                     </div>
+                    <div className="contact-item">
+                        <span>📧</span> <a href="mailto:thanu.silva@mail.ru">thanu.silva@mail.ru</a>
+                    </div>
                 </div>
                 <div className="footer-links">
                     <h4>Quick Links</h4>

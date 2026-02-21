@@ -1049,6 +1049,10 @@ img {
   background-color: #0088cc;
 }
 
+.btn-social-full.email {
+  background-color: #D44638;
+}
+
 /* Includes List */
 .includes-list li {
   margin-bottom: 1rem;
