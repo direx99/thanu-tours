@@ -37,7 +37,7 @@ const TourDetails = () => {
             facebook: `https://www.facebook.com/share/1AY2pjWxVS/`,
             instagram: `https://ig.me/m/thanu_tours`,
             telegram: `https://t.me/+94774718374`,
-            email: `mailto:thanu.silva@mail.ru?subject=${emailSubject}`
+            email: `mailto:toursthanu@gmail.com?subject=${emailSubject}`
         };
     };
 
